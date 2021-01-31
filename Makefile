@@ -3,7 +3,7 @@ CXX=clang++
 TARGET=neon-test
 OBJS:=$(SRCS:.cpp=.o)
 
-CXXFLAGS:= -Wall -mfloat-abi=hard -mfpu=neon -march=armv8-a
+CXXFLAGS:= -Wall -mfloat-abi=hard -mfpu=neon -march=armv8-a --debug -O2
 
 all: $(OBJS)
 	$(CXX) -o $(TARGET) $<
